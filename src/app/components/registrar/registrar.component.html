@@ -1,0 +1,20 @@
+<form [formGroup]="registrarForm">
+    <div class="mb-10 col-4">
+        <label class="form-label">Nombre completo</label>
+        <input matInput formControlName="Nombre" type="text" class="form-control" placeholder="Nombre completo" ngModel required>
+      </div>
+      <br>
+    <div class="mb-10 col-4">
+      <label class="form-label">Usuario</label>
+      <input matInput formControlName="Usuario" type="text" class="form-control" placeholder="Usuario" ngModel required>
+    </div>
+    <br>
+    <div class="mb-10 col-4">
+      <label class="form-label">Contraseña</label>
+      <input matInput formControlName="Contrasena" type="password" class="form-control" placeholder="contraseña" ngModel required>
+    </div>
+    <br>
+    <button type="submit" [disabled]="registrarForm.invalid" class="btn btn-warning" (click)="registro()">Registrarse</button>
+</form>
+
+
